@@ -46,14 +46,15 @@ public class CategoryAdapter extends FragmentPagerAdapter {
      */
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new EatFragment();
-        } else if (position == 1) {
-            return new FunFragment();
-        } else if (position == 2) {
-            return new SeeFragment();
-        } else {
-            return new SleepFragment();
+        switch (position) {
+            case 0:
+                return new EatFragment();
+            case 1:
+                return new FunFragment();
+            case 2:
+                return new SeeFragment();
+            default:
+                return new SleepFragment();
         }
     }
 
@@ -67,14 +68,15 @@ public class CategoryAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        if (position == 0) {
-            return mContext.getString(R.string.category_eat);
-        } else if (position == 1) {
-            return mContext.getString(R.string.category_fun);
-        } else if (position == 2) {
-            return mContext.getString(R.string.category_see);
-        } else {
-            return mContext.getString(R.string.category_sleep);
+        switch (position) {
+            case 0:
+                return mContext.getString(R.string.category_eat);
+            case 1:
+                return mContext.getString(R.string.category_fun);
+            case 2:
+                return mContext.getString(R.string.category_see);
+            default:
+                return mContext.getString(R.string.category_sleep);
         }
     }
 }

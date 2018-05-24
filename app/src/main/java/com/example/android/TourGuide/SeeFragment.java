@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * {@link Fragment} that displays a list of color vocabulary words.
@@ -40,7 +41,7 @@ public class SeeFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.word_list, container, false);
 
         // Create a list of tours
-        final ArrayList<Tour> tours = new ArrayList<Tour>();
+        List<Tour> tours = new ArrayList<>();
         tours.add(new Tour(R.string.barbakan, R.string.barbakan_address,
                 R.drawable.barbakan));
         tours.add(new Tour(R.string.lazienki, R.string.lazienki_address,

@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * {@link Fragment} that displays a list of family vocabulary words.
@@ -40,7 +41,7 @@ public class FunFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.word_list, container, false);
 
         // Create a list of tours
-        final ArrayList<Tour> tours = new ArrayList<Tour>();
+        List<Tour> tours = new ArrayList<>();
         tours.add(new Tour(R.string.cnk, R.string.cnk_address,
                 R.drawable.cnk));
         tours.add(new Tour(R.string.bw, R.string.bw_address,

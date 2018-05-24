@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * {@link Fragment} that displays a list of number vocabulary words.
@@ -40,7 +41,7 @@ public class EatFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.word_list, container, false);
 
         // Create a list of tours
-        final ArrayList<Tour> tours = new ArrayList<Tour>();
+        List<Tour> tours = new ArrayList<>();
         tours.add(new Tour(R.string.amber_room,  R.string.amber_room_address,
                 R.drawable.amber_room));
         tours.add(new Tour(R.string.dom_polski_restaurant, R.string.dom_polski_restaurant_address,
